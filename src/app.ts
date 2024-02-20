@@ -12,11 +12,12 @@ const amount = document.querySelector("#amount") as HTMLInputElement;
 const ul = document.querySelector("ul") as HTMLUListElement;
 const list = new ListTemplates(ul);
 
-let values: [string, string, number];
-values = [tofrom.value, details.value, amount.valueAsNumber];
-
 form.addEventListener("submit", (e: Event) => {
   e.preventDefault();
+
+  let values: [string, string, number];
+  values = [tofrom.value, details.value, amount.valueAsNumber];
+
   let doc: HasFormatter;
 
   if (type.value === "invoice") {

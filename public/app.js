@@ -8,10 +8,10 @@ const details = document.querySelector("#details");
 const amount = document.querySelector("#amount");
 const ul = document.querySelector("ul");
 const list = new ListTemplates(ul);
-let values;
-values = [tofrom.value, details.value, amount.valueAsNumber];
 form.addEventListener("submit", (e) => {
     e.preventDefault();
+    let values;
+    values = [tofrom.value, details.value, amount.valueAsNumber];
     let doc;
     if (type.value === "invoice") {
         doc = new Invoice(...values);
